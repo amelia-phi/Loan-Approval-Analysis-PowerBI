@@ -11,16 +11,14 @@
 ## Project Objective & Business Problem
 ### Business Problem
 
-### Project Objective
-The primary objective of this project is to develop a comprehensive **Credit Risk and Loan Portfolio Dashboard** that provides insights into lending patterns and borrower behavior. This project enables the business to monitor portfolio health, evaluate the effectiveness of credit scoring, and identifying high-risk segments in real-time. 
+### Objective
 
 
 
 ## Data Sources & Transformations
 ### About Dataset
 The primary dataset used for this analysis is the **"Realistic Loan Approval Dataset | US & Canada"** sourced from [Kaggle](https://www.kaggle.com/datasets/parthpatel2130/realistic-loan-approval-dataset-us-and-canada).
-
-The raw data was imported as a single flat table containing **20 columns**. Preliminary profiling revealed a mix of categorical (Employment Status, Loan Intent) and numerical (FICO, DTI, Income) variables.
+The raw data was imported as a single flat table containing **20 columns**, in which includes 50K realistic loan applications of 3 product types (Credit Card, Personal Loan, Line of Credit).
 
 
 ### Data Clean
@@ -56,6 +54,8 @@ The integrity of the model is secured through the establishment of a One-to-many
 * A 1:* relationship is enforcfed, allowing unique borrower profile to be associated with multiple transactional loan records.
 
 * Single direction is applied, flowing from `Dim_Borrower` to `Fact_Loans`. This ensures that filters applied to borrower demographics (e.g., `credit_tier`) correctly propagate to aggregate loan metrics without creating circular dependencies.
+
+### DAX
 
 
 ## Visuals & Key Insight
