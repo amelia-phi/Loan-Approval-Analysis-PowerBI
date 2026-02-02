@@ -39,10 +39,10 @@ The primary objective of this project is to develop a **Credit Risk Engine in Po
 ## Data Sources & Transformations
 ### About Dataset
 The primary dataset used for this analysis is the **"Realistic Loan Approval Dataset | US & Canada"** sourced from [Kaggle](https://www.kaggle.com/datasets/parthpatel2130/realistic-loan-approval-dataset-us-and-canada).
-The raw data was imported as a single flat table containing **20 columns**, in which includes 50K realistic loan applications of 3 product types (Credit Card, Personal Loan, Line of Credit).
+The raw data was imported as a single flat table containing **20 columns**, in which includes 50K realistic loan applications with 3 product types (Credit Card, Personal Loan, Line of Credit).
 
 
-### Data Clean
+### Data Transformations
 Before analysing the dataset, I performed the following transformation in Power Query to align the data with North American financial standards:
 
 * **Schema Optimisation**: Defined data types for all 20 columns, ensuring financial metrics (income, loan amounts) were handled as fixed decimals and identifiers as strings.
