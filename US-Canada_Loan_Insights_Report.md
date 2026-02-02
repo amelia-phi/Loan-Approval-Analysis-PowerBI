@@ -9,7 +9,12 @@
 
 
 ## Project Objective & Business Problem
-Define the main objective of the proejct and describe the specific business problem being addressed.
+### Business Problem
+
+### Project Objective
+The primary objective of this project is to develop a comprehensive **Credit Risk and Loan Portfolio Dashboard** that provides insights into lending patterns and borrower behavior. This project enables the business to monitor portfolio health, evaluate the effectiveness of credit scoring, and identifying high-risk segments in real-time. 
+
+
 
 ## Data Sources & Transformations
 ### About Dataset
@@ -27,7 +32,7 @@ Before analysing the dataset, I performed the following transformation in Power 
 
 * **Metric Standardisation**: Standardised `interest_rate` column by applying a division transformation, converting raw basis points into a true percentage format.
 
-* **Value Mapping**: Performed on the ``loan_status`` binary variable, replacing `0` and `1` with descriptive labels (`Rejected` and `Approved`) to improve report legibility for non-technical stakeholders.
+* **Value Mapping**: Performed on the `loan_status` binary variable, replacing `0` and `1` with descriptive labels (`Rejected` and `Approved`) to improve report legibility for non-technical stakeholders.
 
 * **Risk Segmentation**: Created `credit_tier` column based on standard Equifax/FICO scoring models to facilitate categorical risk analysis:
   * **Exceptional**: 800+
@@ -37,7 +42,21 @@ Before analysing the dataset, I performed the following transformation in Power 
   * **Poor**: <580
 
 ## Data Model & DAX
-Describe the schema, relationships between tables, and highlight any important DAX measures creates.
+### Data Normalisation & Schema Design
+Following the data cleaning phase, the dataset is restructured into a Star Schema to enhance analytic performance.
+
+The flat datastructure is decomposed into two distinct categories, separating descriptive attributes from transactional met5rics:
+* **Dimension Table** (`Dim_Borrower`): including static borrower attributes, such as **age**, **income**, and **credit history**. Unique recored were ensured by removing duplicate entries based on `customer_id`.
+
+* **Fact Table** (`Fact_Loans`): including all transactional data and measurable events, such as loan amounts, interest rates, and approval statuses. 
+ 
+The integrity of the model is secured through the establishment of a One-to-many (1:*) relationship between the Dimension and Fact tables:
+* `customer_id` is the Primary Key in `Dim_Borrower` and Foreign Key in Fact_Loans.
+
+* A 1:* relationship is enforcfed, allowing unique borrower profile to be associated with multiple transactional loan records.
+
+* Single direction is applied, flowing from `Dim_Borrower` to `Fact_Loans`. This ensures that filters applied to borrower demographics (e.g., `credit_tier`) correctly propagate to aggregate loan metrics without creating circular dependencies.
+
 
 ## Visuals & Key Insight
 Capture images and describe, summarise the key insights, and provide recommendations if applicable.
