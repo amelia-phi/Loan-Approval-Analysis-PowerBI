@@ -12,8 +12,6 @@
 Define the main objective of the proejct and describe the specific business problem being addressed.
 
 ## Data Sources & Transformations
-outline the main cleaning and transformation steps (e.g., removing nulls, standardising data columns, joining tables).
-
 ### About Dataset
 The primary dataset used for this analysis is the **"Realistic Loan Approval Dataset | US & Canada"** sourced from [Kaggle](https://www.kaggle.com/datasets/parthpatel2130/realistic-loan-approval-dataset-us-and-canada).
 
@@ -37,10 +35,6 @@ Before analysing the dataset, I performed the following transformation in Power 
   * **Good**: 670–739
   * **Fair**: 580–669
   * **Poor**: <580
-
-
-
-
 
 ## Data Model & DAX
 Describe the schema, relationships between tables, and highlight any important DAX measures creates.
