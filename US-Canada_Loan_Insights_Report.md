@@ -16,11 +16,11 @@ While this conservative posture ensures high portfolio quality, a preliminary re
 
 Key areas of concern include:
 
-* High rejection rates in the Personal Loan segment—specifically for debt consolidation—are pushing viable customers toward more agile FinTech competitors.
+* **Market Competition**: High rejection rates in the Personal Loan segment—specifically for debt consolidation—are pushing viable customers toward more agile FinTech competitors.
 
-* Manual review requirement for Lines of Credit exceeding $50,000 is creating significant friction in the customer journey and increasing the cost-per-acquisition.
+* **Operational Friction**: Manual review requirement for Lines of Credit exceeding $50,000 is creating significant friction in the customer journey and increasing the cost-per-acquisition.
 
-* Over-weighting "thin" credit files for Credit Card applications is preventing the bank from capturing younger demographics (Students/Early Career) who represent long-term revenue growth.
+* **Growth Barriers**: Over-weighting "thin" credit files for Credit Card applications is preventing the bank from capturing younger demographics (Students/Early Career) who represent long-term revenue growth.
 
 
 
@@ -28,13 +28,13 @@ Key areas of concern include:
 ### Objective
 The primary objective of this project is to develop a **Credit Risk Engine in Power BI** focusing on 4 key pillars: 
 
-* Identifying the subset of rejected applicants who passed all primary "Hard-Stop" rules (DTI < 50% and no defaults) to determine where discretionary criteria may be overly restrictive.
+* **Optimisation Zone**: Identifying the subset of rejected applicants who passed all primary "Hard-Stop" rules (DTI < 50% and no defaults) to determine where discretionary criteria may be overly restrictive.
 
-* Evaluating whether "Loan Intent" (e.g., Education vs. Business) correlates with lower default risk, justifying more flexible DTI thresholds for specific products.
+* **Product-Specific Risk Calibration**: Evaluating whether "Loan Intent" (e.g., Education vs. Business) correlates with lower default risk, justifying more flexible DTI thresholds for specific products.
 
-* Establishing clear "Auto-Approval" parameters for Lines of Credit under $50,000 to streamline the approval pipeline and reduce the manual workload for underwriters.
+* **Underwriting Efficiency**: Establishing clear "Auto-Approval" parameters for Lines of Credit under $50,000 to streamline the approval pipeline and reduce the manual workload for underwriters.
 
-* Simulating the financial impact of adjusting approval thresholds to target a 5–10% increase in total loan disbursements without exceeding current delinquency benchmarks.
+* **Portfolio Expansion**: Simulating the financial impact of adjusting approval thresholds to target a 5–10% increase in total loan disbursements without exceeding current delinquency benchmarks.
 
 ## Data Sources & Transformations
 ### About Dataset
